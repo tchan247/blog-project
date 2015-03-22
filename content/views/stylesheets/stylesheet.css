@@ -1,0 +1,14 @@
+
+body {
+	background-color: #eee;
+	margin: 0;
+	font-family: helvetica;
+}
+
+.menu_main {
+	width: 300px;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	background-color: darkgrey;
+}
