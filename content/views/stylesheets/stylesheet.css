@@ -5,10 +5,23 @@ body {
 	font-family: helvetica;
 }
 
+/* page menu */
 .menu_main {
 	width: 300px;
 	position: absolute;
 	top: 0;
 	bottom: 0;
-	background-color: darkgrey;
+	background-color: lightcyan;
 }
+
+/* page body */
+.page_main {
+  display: block;
+  margin-left: 300px;
+}
+
+.blog_posts {
+
+  
+}
+
