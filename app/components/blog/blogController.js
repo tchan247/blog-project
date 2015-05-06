@@ -1,9 +1,6 @@
+(function(){
 
-(function() {
-
-  var app = angular.module('blog', []);
-
-    var post = {
+  var post = {
     subject: 'Cool Subject',
     date: 'today',
     text: 'bla bla',
@@ -11,7 +8,10 @@
     comment: 'comment'
   };
 
-  app.controller('BlogController', function() {
+  // blog controller
+  var blog = angular.module('blog-controller', []);
+
+  blog.controller('blogController', function(){
     this.posts = post;
   });
 
