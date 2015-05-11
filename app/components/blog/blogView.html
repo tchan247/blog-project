@@ -1,0 +1,14 @@
+<div class='blog_posts'>
+
+  <div class='post'> 
+
+    <h1 class='post_title'> {{posts.subject}} </h1>
+    <h4 class='post_date'> {{posts.date}} </h4>
+    <p class='post_text'> {{posts.text}} </p>
+    <ul class='post_tags' > Tags:
+      <li ng-repeat='tag in posts.tags'> {{tag}} </li>
+    </ul>
+    <p class='comment'> Comments: {{posts.comment}} </p>
+  </div>
+
+</div>

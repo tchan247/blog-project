@@ -7,7 +7,8 @@ body {
 
 /* page menu */
 .menu_main {
-	width: 300px;
+  display: block;
+	width: 400px;
 	position: absolute;
 	top: 0;
 	bottom: 0;
@@ -16,11 +17,13 @@ body {
 
 .menu_options {
 
-  margin-top: 50px;
+  margin-top: 100px;
 
 }
 
 .menu_options div {
+
+  margin-top: 30px;
   
 	font-size: 30px;
 
@@ -28,14 +31,30 @@ body {
 	
 }
 
+.menu_options div a {
+  /*color: darkgrey;*/
+}
+
 /* page body */
 .page_main {
-  display: block;
-  margin-left: 300px;
+  display: inline-block;
+  margin-top: 100px;
+  margin-left: 450px;
 }
 
 .blog_posts {
-
+  width: 500px;
   margin-left: 50px;
+  font-size: 18px;
+}
+
+.post_tags {
+  /*float: left;*/
+  display: inline-block;
+}
+
+.blog_posts .comment {
+  display: block;
+  /*float: left;*/
 }
 
