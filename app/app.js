@@ -1,27 +1,38 @@
 
-(function() {
+angular.module('app', ['ngRoute', 'ngResource', 'blog-service', 'blog-controller'])
 
-  var app = angular.module('app', ['home', 'blog', 'ngRoute', 'ngResource']);
-
-  app.config(function($routeProvider){
-    $routeProvider.when('/blog', {
+  .config(function($routeProvider){
+    $routeProvider
+    .when('/blog', {
       templateUrl: 'app/components/blog/blogView.html',
-      controller: 'blogController'
-      // controllerAs: 'blogController'
+      controller: 'blogController',
+      resolve: {
+        postsData: function(PostsService){
+          return PostsService.getPosts();
+        }
+      }
+    })
+
+    .when('/user', {
+
+    })
+
+    .when('/search', {
+      // templateUrl: 'app/components/blog/blogView.html',
+      // controller: 'blogController',
+    })
+
+    .when('/projects', {
+
     })
 
     .when('./', {
       templateUrl: './index.html'
     })
 
+
     .otherwise({
       redirectTo: '/'
     });
 
   });
-
-  var home = angular.module('home', []);
-
-  var blog = angular.module('blog', ['blog-controller']);
-
-})();

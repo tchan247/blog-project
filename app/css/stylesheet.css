@@ -1,4 +1,4 @@
-
+  
 body {
 	background-color: #eee;
 	margin: 0;
@@ -8,8 +8,8 @@ body {
 /* page menu */
 .menu_main {
   display: block;
-	width: 400px;
-	position: absolute;
+	width: 300px;
+	position: fixed;
 	top: 0;
 	bottom: 0;
 	background-color: lightcyan;
@@ -39,22 +39,43 @@ body {
 .page_main {
   display: inline-block;
   margin-top: 100px;
-  margin-left: 450px;
+  margin-left: 400px;
 }
 
 .blog_posts {
-  width: 500px;
-  margin-left: 50px;
+  width: 700px;
   font-size: 18px;
+  margin-bottom: 100px;
+}
+
+.post_text code {
 }
 
 .post_tags {
-  /*float: left;*/
-  display: inline-block;
+  /*display: inline-block;*/
 }
 
-.blog_posts .comment {
-  display: block;
+.post_tags li {
   /*float: left;*/
+  margin-left: 10px;
+  display: inline;
 }
+
+.blog_posts ul {
+  list-style-type: none;
+}
+
+.post_comments {
+
+}
+
+.comment {
+  
+}
+
+.commentName {
+  margin-left: -20px;
+}
+
+
 

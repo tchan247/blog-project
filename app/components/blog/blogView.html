@@ -1,14 +1,39 @@
 <div class='blog_posts'>
+  <ul>
+    <li ng-repeat='post in posts'>
+      <div class='post'>
+        <h1 class='post_title'> {{post.subject}} </h1>
+        <h4 class='post_date'> {{post.createdAt | date: format}} </h4>
+        <p class='post_text' ng-bind-html='post.textBody'> </p>
 
-  <div class='post'> 
+        <!-- post tags -->
+        <div>
+          <h4> Tags: </h4>
+          <ul class='post_tags'> 
+            <li ng-repeat='tag in post.tags'> 
+              <a ng-href='#/search/{{tag}}'> {{tag}} </a>
+            </li>
+          </ul>
+        </div>
 
-    <h1 class='post_title'> {{posts.subject}} </h1>
-    <h4 class='post_date'> {{posts.date}} </h4>
-    <p class='post_text'> {{posts.text}} </p>
-    <ul class='post_tags' > Tags:
-      <li ng-repeat='tag in posts.tags'> {{tag}} </li>
-    </ul>
-    <p class='comment'> Comments: {{posts.comment}} </p>
-  </div>
+        <!-- post comments -->
+        <div class='post_comments'>
+          <h4> Comments: </h4>
+          <ul> 
+            <li class='.comment' ng-repeat='comment in post.comments'>
+              <div>
+                <h4 class='commentName'>
+                  <a ng-href='#/user/{{comment.name}}'>{{comment.name}}</a>
+                </h4>
+                <p>
+                  {{comment.comment}}
+                </p>
+              </div>
+             <li>
+          </ul>
+        </div>
+      </div>
+    <li>
+  <ul>
 
 </div>
