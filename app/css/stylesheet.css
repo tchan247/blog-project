@@ -48,7 +48,12 @@ body {
   margin-bottom: 100px;
 }
 
+.post_text pre {
+  padding: 0;
+}
+
 .post_text code {
+  padding: 0;
 }
 
 .post_tags {

@@ -11,13 +11,13 @@ angular.module('blog-service', [])
     });
   };
 
-  formatDate = function(str) {
-    return (new Date()).toISOString();
+  postComment = function(data) {
+    console.log('post comment');
   };
 
   return {
     getPosts: getPosts,
-    formatDate: formatDate
+    postComment: postComment
   };
 
 });
