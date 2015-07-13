@@ -48,6 +48,10 @@ body {
   margin-bottom: 100px;
 }
 
+.post {
+  margin-bottom: 100px;
+}
+
 .post_text pre {
   padding: 0;
 }

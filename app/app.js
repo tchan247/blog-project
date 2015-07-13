@@ -1,5 +1,5 @@
 
-angular.module('app', ['ngRoute', 'ngResource', 'blog-service', 'blog-controller'])
+angular.module('app', ['ngRoute', 'ngResource', 'blog-service', 'blog-controller', 'admin'])
 
   .config(function($routeProvider){
     $routeProvider
@@ -31,8 +31,8 @@ angular.module('app', ['ngRoute', 'ngResource', 'blog-service', 'blog-controller
     })
 
 
-    .otherwise({
-      redirectTo: '/'
-    });
+    // .otherwise({
+    //   redirectTo: '/'
+    // });
 
   });
