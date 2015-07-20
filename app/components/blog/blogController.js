@@ -10,7 +10,6 @@ angular.module('blog-controller', [ 'ngSanitize'])
 
   PostsService.getImages()
     .then(function(data){
-      console.log(data);
     });
 
 });

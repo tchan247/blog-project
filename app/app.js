@@ -1,5 +1,6 @@
 
-angular.module('app', ['ngRoute', 'ngResource', 'blog-service', 'blog-controller', 'admin'])
+angular.module('app', ['ngRoute', 'ngResource', 'home-service', 'home-controller', 'blog-service', 
+  'blog-controller', 'projects-service', 'projects-controller', 'admin'])
 
   .config(function($routeProvider){
     $routeProvider
