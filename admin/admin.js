@@ -1,4 +1,4 @@
-angular.module('admin', ['ngRoute', 'ngResource', 'admin.edit', 'admin.login'])
+angular.module('admin', ['ngRoute', 'ngResource', 'app', 'admin.edit', 'admin.login'])
 
 .config(function($routeProvider){
   $routeProvider
@@ -10,7 +10,8 @@ angular.module('admin', ['ngRoute', 'ngResource', 'admin.edit', 'admin.login'])
     templateUrl: 'admin/components/edit/editView.html',
     controller: 'editController'
   })
-  .otherwise({
-    redirectTo: '/'
-  });
+  // .otherwise({
+  //   redirectTo: '/login'
+  // });
 });
+
