@@ -1,18 +1,27 @@
 
 angular.module('app', ['ngRoute', 'ngResource', 'home-service', 'home-controller', 'blog-service', 
-  'blog-controller', 'projects-service', 'projects-controller'])
+  'blog-controller', 'projects-service', 'projects-controller', 'admin'])
 
   .config(function($routeProvider){
     $routeProvider
-    // .when('/login', {
-    //   templateUrl: 'admin/components/login/loginView.html',
-    //   controller: 'loginController'
-    // })
-    // .when('/edit', {
-    //   templateUrl: 'admin/components/edit/editView.html',
-    //   controller: 'editController'
-    // })
-
+    .when('/login', {
+      templateUrl: './client/admin/components/login/loginView.html',
+      controller: 'loginController'
+    })
+    .when('/edit', {
+      templateUrl: './client/admin/components/edit/editView.html',
+      controller: 'editController',
+      resolve: {
+        auth: function($location, loginService) {
+          var bool = loginService.getAuthToken();
+          if(bool) {
+            console.log('authed!');
+          } else {
+            $location.path('/');
+          }
+        }
+      }
+    })
     .when('/blog', {
       templateUrl: './client/website/components/blog/blogView.html',
       controller: 'blogController',
@@ -22,27 +31,23 @@ angular.module('app', ['ngRoute', 'ngResource', 'home-service', 'home-controller
         }
       }
     })
-
     .when('/user', {
-
+      templateUrl: '',
+      controller: '',
     })
-
     .when('/search', {
-      // templateUrl: 'app/components/blog/blogView.html',
-      // controller: 'blogController',
+      templateUrl: '',
+      controller: '',
     })
-
     .when('/projects', {
-
+      templateUrl: '',
+      controller: '',
     })
-
     .when('./', {
       templateUrl: './index.html'
     })
-
-
-    // .otherwise({
-    //   redirectTo: '/'
-    // });
+    .otherwise({
+      redirectTo: '/'
+    });
 
   });

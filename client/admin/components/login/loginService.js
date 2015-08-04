@@ -1,8 +1,11 @@
-angular.module('admin.login', [])
+angular.module('admin.login')
 
 .factory('loginService', function($http){
+  var authToken = true;
 
-
+  getAuthToken = function() {
+    return authToken;
+  };
 
   handleLogin = function() {
 
@@ -13,7 +16,8 @@ angular.module('admin.login', [])
   };
 
   return {
-    login: login
+    login: login,
+    getAuthToken: getAuthToken
   };
 
 });

@@ -1,9 +1,10 @@
-angular.module('admin.edit', [])
+angular.module('admin.edit')
 
-.controller('editController', function($scope, editService) {
+.controller('editController', function($scope, editService, loginService) {
   $scope.upload = function() {
-    var data = $("#textInput").val();
-    editService.processPost(data);
+    console.log('uploading');
+    var data = angular.element(document.querySelector("#textInput")).val();
+    console.log(editService.processPost(data));
   };
 
   console.log('edit controller');

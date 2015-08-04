@@ -1,7 +1,10 @@
-angular.module('admin.login', [])
+angular.module('admin.login')
 
-.controller('loginController', function($scope){
+.controller('loginController', function($scope, loginService){
   console.log('login controller');
-  $scope.test = 'test';
+  $scope.test = function() {
+    console.log(loginService.getAuthToken());
+  };
+
 });
 

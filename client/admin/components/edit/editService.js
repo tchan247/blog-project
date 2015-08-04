@@ -1,4 +1,4 @@
-angular.module('admin.edit', [])
+angular.module('admin.edit')
 
 .factory('editService', function($http){                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
 
@@ -33,7 +33,6 @@ angular.module('admin.edit', [])
         lineBreak = true;
       } else {
         if(char === ' ' && lineBreak) {
-          console.log('space');
           newStr = newStr.concat('&nbsp;');
         } else {
           lineBreak = false;
@@ -46,7 +45,8 @@ angular.module('admin.edit', [])
   };
 
   return {
-    postPost: postPost
+    postPost: postPost,
+    processPost: processPost
   };
 });
 
