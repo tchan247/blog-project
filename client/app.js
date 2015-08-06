@@ -4,6 +4,7 @@ angular.module('app', ['ngRoute', 'ngResource', 'home-service', 'home-controller
 
   .config(function($routeProvider){
     $routeProvider
+    // admin routes
     .when('/login', {
       templateUrl: './client/admin/components/login/loginView.html',
       controller: 'loginController'
@@ -22,6 +23,8 @@ angular.module('app', ['ngRoute', 'ngResource', 'home-service', 'home-controller
         }
       }
     })
+
+    // app routes
     .when('/blog', {
       templateUrl: './client/website/components/blog/blogView.html',
       controller: 'blogController',
@@ -31,20 +34,26 @@ angular.module('app', ['ngRoute', 'ngResource', 'home-service', 'home-controller
         }
       }
     })
-    .when('/user', {
-      templateUrl: '',
-      controller: '',
-    })
-    .when('/search', {
-      templateUrl: '',
-      controller: '',
-    })
+    // .when('/user', {
+    //   templateUrl: '',
+    //   controller: '',
+    // })
+    // .when('/search', {
+    //   templateUrl: '',
+    //   controller: '',
+    // })
     .when('/projects', {
-      templateUrl: '',
-      controller: '',
+      templateUrl: './client/website/components/projects/projectsView.html',
+      controller: 'projectsController',
     })
-    .when('./', {
-      templateUrl: './index.html'
+    .when('/', {
+      templateUrl: './client/website/components/home/homeView.html',//'./index.html'
+      controller: 'homeController',
+      resolve: {
+        aboutData: function(homeService){
+          return homeService.getAboutMe();
+        }
+      }
     })
     .otherwise({
       redirectTo: '/'

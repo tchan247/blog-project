@@ -12,7 +12,7 @@ angular.module('home-service', [])
   var getAboutMe = function(){
     return $http({
       method: 'GET', 
-      url: '', 
+      url: 'https://api.parse.com/1/classes/about_me', 
       headers: {'X-Parse-Application-Id':'fCTyXGLEO67M6Ouf4bw4wgnsYxoE7vOvtgxkgzSj', 'X-Parse-REST-API-Key':'lj4Pqa5VjeugGRx4S2jM1YteZR1PUjt8iRm65LHU'}
     });
   };
