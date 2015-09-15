@@ -1,3 +1,5 @@
 **/.DS_Store
 .ftpquota
 cgi-bin
+
+config.json
