@@ -30,7 +30,6 @@ angular.module('app', ['ngRoute', 'ngResource', 'home-service', 'home-controller
       controller: 'blogController',
       resolve: {
         postsData: function(PostsService){
-          PostsService.getHeaders();
           return PostsService.getPosts();
         }
       }

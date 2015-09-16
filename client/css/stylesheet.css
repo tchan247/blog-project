@@ -78,6 +78,10 @@ body {
 
 }
 
+.post-image {
+  max-width: 90%;
+}
+
 .comment {
   
 }
