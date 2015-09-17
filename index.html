@@ -7,7 +7,7 @@
   <!-- <base href='./'> -->
 
 	<link rel='stylesheet' href='client/css/stylesheet.css'>
-  <link rel="stylesheet" href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css'>
+<!--   <link rel="stylesheet" href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css'> -->
 
 </head>
 
@@ -21,30 +21,44 @@
 	<div class='intro'></div>
 
   <!-- Menu -->
-  <div class='menu_main'> 
+  <div class='menu-main'> 
 
-    <div class='menu_options'>
-      
-      <div> <a href='#/'> Home </a> </div>
-
-      <div> <a href='#/blog'> Blog </a> </div>
-
-      <div> <a href='#/projects'> Projects </a> </div>
-
-      <div> <a href='#/contact'> Contact </a> </div>
-
-      <div class='links'>
-        <a target='_' href='https://github.com/tchan247'> <img src='client/img/GitHub-Mark-32px.png'> </a>
-        <a target='_' href='http://terrychansketchbook.blogspot.com/'> <img src='client/img/blogger-40px.png'> </a>
-        <a target='_' href='https://www.linkedin.com/in/tchan247'> <img src='client/img/linkedin-34px.png'> </a>
-      </div>
-      
+    <div class='menu-icon'>
+      <img src='client/img/menu-icon-invert.png'>
     </div>
 
+    <div class='menu-options'>
+      <ul>
+        <li> <a href='#/'> Home </a> </li>
+        <li> <a href='#/blog'> Blog </a> </li>
+        <li> <a href='#/projects'> Projects </a> </li>
+        <li> <a href='#/contact'> Contact </a> </li>
+      </ul>
+    </div>
+
+    <div class='menu-links'>
+      <ul>
+        <li>
+          <a target='_' href='https://github.com/tchan247'>
+            <img src='client/img/GitHub-Mark-32px.png'>
+          </a>
+        </li>
+        <li>
+          <a target='_' href='http://terrychansketchbook.blogspot.com/'>
+            <img src='client/img/blogger-40px.png'>
+          </a>
+        </li>
+        <li>
+          <a target='_' href='https://www.linkedin.com/in/tchan247'>
+            <img src='client/img/linkedin-34px.png'>
+          </a>
+        </li>
+      </ul>
+    </div>
   </div>
 
   <!-- Main Content -->
-  <div class='page_main'>
+  <div class='page-main'>
 
     <div ng-view></div>
 

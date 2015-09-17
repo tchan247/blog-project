@@ -1,92 +1,159 @@
   
 body {
-	background-color: #eee;
+	/*background-color: #eee;*/
 	margin: 0;
-	font-family: helvetica;
+  padding: 0;
+	font-family: Helvetica;
 }
 
 /* page menu */
-.menu_main {
-  display: block;
-	width: 300px;
+.menu-main {
+  display: inlineblock;
+	width: 200px;
+  margin-left: -150px;
 	position: fixed;
 	top: 0;
 	bottom: 0;
-	background-color: lightcyan;
+	background-color: #3e4649;
+  opacity: .5;
+  -webkit-transition-duration: .7s;
+  transition-duration: .7s;
 }
 
-.menu_options {
+.menu-main:hover {
+  margin-left: 0;
+  opacity: 1;
+  background-color: #e27e1f;
+}
 
+.menu-main div {
+  display: block;
+}
+
+.menu-icon img {
+  width: 50px;
+  height: auto;
+  float: right;
+}
+
+.menu-options {
   margin-top: 100px;
-
 }
 
-.menu_options div {
+.menu-options ul {
+  padding: 0;
+  list-style: none;
+}
 
+.menu-options li {
+  height: auto;
+  text-align: right;
+  padding: 0 10px;
+}
+
+.menu-options li:hover {
+  background-color: white;
+}
+
+.menu-options li a {
   margin-top: 30px;
-  
-	font-size: 30px;
-
-	text-align: center;
-	
+  font-size: 30px;
+  text-decoration: none;
+  color: #7c4400;
 }
 
-.menu_options div a {
-  /*color: darkgrey;*/
+.menu-links {
+  margin-top: 100px;
+  width: auto;
+  list-style: none;
+  padding: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.menu-links li {
+  float: left;
+  display: inline-block;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.menu-links li a {
+  text-decoration: none;
 }
 
 /* page body */
-.page_main {
-  display: inline-block;
+.page-main {
   margin-top: 100px;
-  margin-left: 400px;
 }
 
-.blog_posts {
-  width: 700px;
+.blog-posts {
+  min-width: 500px;
+  max-width: 700px;
   font-size: 18px;
   margin-bottom: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 100px;
+}
+
+.blog-posts ul {
+  padding: 0;
+  list-style-type: none;
 }
 
 .post {
   margin-bottom: 100px;
 }
 
-.post_text pre {
-  padding: 0;
+.post-title {
+  font-family: Futura, 'Trebuchet MS', Arial, sans-serif;
+  font-weight: 100;
 }
 
-.post_text code {
-  padding: 0;
+.post-text pre {
+  padding: 15px;
+  border: solid 1px #35acb7;
+  border-radius: 5px;
 }
 
-.post_tags {
-  /*display: inline-block;*/
-}
-
-.post_tags li {
-  /*float: left;*/
-  margin-left: 10px;
-  display: inline;
-}
-
-.blog_posts ul {
-  list-style-type: none;
-}
-
-.post_comments {
-
+.post-text code {
+  white-space: -moz-pre-wrap;
+  white-space: -o-pre-wrap;
+  white-space: pre-wrap;
+  word-wrap: break-word;
 }
 
 .post-image {
   max-width: 90%;
 }
 
+/* post tags */
+.post-tags {
+  /*display: inline-block;*/
+}
+
+.post-tags li {
+  margin-left: 10px;
+  display: inline;
+}
+
+.post-tags li a {
+  color: #35acb7;
+  text-decoration: none;
+}
+
+/* post comments */
+.post-comments {
+
+}
+
 .comment {
   
 }
 
-.commentName {
+.comment-name {
   margin-left: -20px;
 }
 
