@@ -2,6 +2,14 @@
 angular.module('app', ['ngRoute', 'ngResource', 'home-service', 'home-controller', 'blog-service', 
   'blog-controller', 'projects-service', 'projects-controller', 'admin'])
 
+  // temporary solution to initialize Parse headers
+  .run(function($http, $rootScope){
+    $http.get('../config.json')
+    .then(function(data){
+      $rootScope.headers =  data.data;
+    });
+  })
+
   .config(function($routeProvider){
     $routeProvider
     // admin routes
