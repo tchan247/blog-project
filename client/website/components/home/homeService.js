@@ -1,20 +1,49 @@
 angular.module('home-service', [])
 
-.factory('homeService', function($http){
+.factory('homeService', function($http, $rootScope){
+
+  getHeaders = function() {
+    return $http.get('config.json');
+  };
+
   var getName = function(){
-    return $http({
-      method: 'GET', 
-      url: '', 
-      headers: {'X-Parse-Application-Id':'fCTyXGLEO67M6Ouf4bw4wgnsYxoE7vOvtgxkgzSj', 'X-Parse-REST-API-Key':'lj4Pqa5VjeugGRx4S2jM1YteZR1PUjt8iRm65LHU'}
-    });
+    var nameRequest = function(headers) {
+      return $http({
+        method: 'GET', 
+        url: '', 
+        headers: headers
+      });
+    };
+
+    if($rootScope.headers) {
+      return nameRequest($rootScope.headers);
+    } else {
+      return getHeaders()
+      .then(function(data){
+        return nameRequest(data.data);
+      });
+    }
+
   };
 
   var getAboutMe = function(){
-    return $http({
-      method: 'GET', 
-      url: 'https://api.parse.com/1/classes/about_me', 
-      headers: {'X-Parse-Application-Id':'fCTyXGLEO67M6Ouf4bw4wgnsYxoE7vOvtgxkgzSj', 'X-Parse-REST-API-Key':'lj4Pqa5VjeugGRx4S2jM1YteZR1PUjt8iRm65LHU'}
-    });
+    var aboutRequest = function(headers) {
+      return $http({
+        method: 'GET', 
+        url: 'https://api.parse.com/1/classes/about_me', 
+        headers: headers
+      });
+
+    };
+
+    if($rootScope.headers) {
+      return aboutRequest($rootScope.headers);
+    } else {
+      return getHeaders()
+      .then(function(data){
+        return aboutRequest(data.data);
+      });
+    }
   };
 
   return {
