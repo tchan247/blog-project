@@ -82,7 +82,8 @@
   <!-- load env variables -->
   <script> 
       angular.module('app').run(function($http){
-        $http.get('get-data.php',function(data) {
+        $http.get('get-data.php')
+        .then(function(data) {
                   console.log("test run", data);
         });
 
