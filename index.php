@@ -1,9 +1,6 @@
 <?php include_once("home.html"); ?>
 
 <?php 
-  // function phpObjToJsCompatibleJsonString($phpObj) { 
-  //     return str_replace("'", "\\'", str_replace("\\","\\\\", json_encode($phpObj, JSON_UNESCAPED_UNICODE)));
-  // } 
 
 ?>
 
@@ -21,8 +18,10 @@
               console.log("test run", data);
     });
 
-    console.log("test", document.getElementById("clientKey").getAttribute("data");
+
 
   });
+
+  console.log("test", document.getElementById("clientKey").getAttribute("data");
 
 </script>
