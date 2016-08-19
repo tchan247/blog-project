@@ -81,6 +81,10 @@
 
   <span id='clientKey' data=""> <?php echo X-Parse-REST-API-Key ?> </span>
 
+  <?php
+    $a = 'string';
+  ?>
+
 <script>
     // var phpObjAsJsonStr = '<?php echo phpObjToJsCompatibleJsonString($php_obj); ?>';
     // var jsObj = JSON.parse(jsObjAsJsonStr);
@@ -93,14 +97,11 @@
               console.log("test run", data);
     });
 
-
-
   });
 
-  console.log(<?php echo json_encode($test); ?>;);
-  console.log(<?php echo json_encode(test); ?>;);
+  console.log('<?php echo $a; ?>');
 
-  // console.log("test", document.getElementById("clientKey").innerText);
+  console.log("test", document.getElementById("clientKey").innerText);
 
 </script>
 
