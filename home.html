@@ -79,7 +79,7 @@
   <script src='client/admin/components/edit/editService.js'></script>
   <script src='client/admin/components/edit/editController.js'></script>
 
-  <span id='clientKey' data="<?php echo X-Parse-REST-API-Key ?>"> </span>
+  <span id='clientKey' data=""> <?php echo X-Parse-REST-API-Key ?> </span>
 
 <script>
     // var phpObjAsJsonStr = '<?php echo phpObjToJsCompatibleJsonString($php_obj); ?>';
@@ -97,7 +97,7 @@
 
   });
 
-  console.log("test", document.getElementById("clientKey").getAttribute("data"));
+  console.log("test", document.getElementById("clientKey").innerText);
 
 </script>
 
