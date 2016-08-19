@@ -85,26 +85,16 @@
     echo $a;
   ?>
 
-  <span id='clientKey' data=""> <?php echo $a; ?> </span>
-
-
 <script>
-    // var phpObjAsJsonStr = '<?php echo phpObjToJsCompatibleJsonString($php_obj); ?>';
-    // var jsObj = JSON.parse(jsObjAsJsonStr);
 
+  // // load env variables
+  // angular.module('app').run(function($http, $rootScope){
+  //   $http.get('get-data.php')
+  //   .then(function(data) {
+  //             console.log("test run", data);
+  //   });
 
-  // load env variables
-  angular.module('app').run(function($http, $rootScope){
-    $http.get('get-data.php')
-    .then(function(data) {
-              console.log("test run", data);
-    });
-
-  });
-
-  console.log(globalVar);
-
-  console.log("test", document.getElementById("clientKey").innerText);
+  // });
 
 </script>
 
